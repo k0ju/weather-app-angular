@@ -1,0 +1,16 @@
+<div id="liste">
+    <ul>
+        <li *ngFor="let karte of karten">
+            <mat-card class="wetterkarte">
+                <mat-card-title-group class="titelgruppe">
+                    <mat-card-title class="stadt">{{karte.stadt}} <span *ngIf="karte.land">&mdash; {{karte.land}}</span></mat-card-title>
+                    <button mat-icon-button aria-label="Aus der Liste entfernen" color="primary" (click)="loeschen(karte.id)"><mat-icon>close</mat-icon></button>
+                </mat-card-title-group>
+                <mat-card-content class="flex-wetter">
+                    <div class="mat-body-2 zentrieren"><i class="wi {{karte.wetter | wmoCodes: karte.tag}} wi-fw"></i></div>
+                    <div class="mat-subtitle-1">{{karte.temp}}<i class="wi wi-celsius"></i><br>{{karte.wetter | wetterBeschreibung}}</div>
+                </mat-card-content>
+            </mat-card>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,17 @@
+<section class="kopfzeile">
+  <h1 class="mat-headline-1"><i class="wi wi-day-cloudy"></i> <span> {{titel}}</span></h1>
+
+  <div class="suche">
+    <input class="mat-body-1" type="text" placeholder="Ort, z.B. Berlin" [(ngModel)]="stadt" [matAutocomplete]="stadtSuche" (input)="setSuchergebnis()" autofocus>
+    <mat-autocomplete autoActiveFirstOption #stadtSuche="matAutocomplete" [displayWith]="getStadtname" (optionSelected)='getErgebnis($event)'>
+      @for (erg of suchErgebnis; track erg) {
+        <mat-option [value]="erg" color="accent">{{erg.name}} <span *ngIf="erg.plz">- {{erg.plz}} </span><span *ngIf="erg.bund">- {{erg.bund}} </span><span *ngIf="erg.land">- {{erg.land}}</span></mat-option>
+      }
+    </mat-autocomplete>
+    <button mat-flat-button color="accent" (click)="setWetter()">Suchen</button>
+  </div>
+</section>
+
+<section class="wetter">
+  <app-wetter [karten]="karten"></app-wetter>
+</section>
