@@ -5,6 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true
 })
 
+// WMO Weather interpretation codes (WW) -> Beschreibung
 export class WetterBeschreibungPipe implements PipeTransform {
 
   transform(value: number): string {

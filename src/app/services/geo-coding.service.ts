@@ -7,8 +7,9 @@ import { Observable } from 'rxjs';
 })
 
 export class GeoCodingService {
+  // Geocoding API: https://open-meteo.com/en/docs/geocoding-api
   url: string = 'https://geocoding-api.open-meteo.com/v1/search?name='
-  params: string = '&count=5&language=de&format=json'
+  params: string = '&count=5&language=de&format=json' 
 
   constructor(private httpClient: HttpClient) { }
 

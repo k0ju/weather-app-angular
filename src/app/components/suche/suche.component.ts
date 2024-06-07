@@ -71,6 +71,8 @@ export class SucheComponent {
   }
 
   setWetter(): void {
+    // Validierung, ob Suchergebnis nach Auswahl noch verändert wurde
+    // TODO: Verbesserung Validierung
     let pruefung = this.suchErgebnis.find(eintrag =>
       eintrag.name === this.ergebnis.name &&
       eintrag.plz === this.ergebnis.plz &&
@@ -98,7 +100,7 @@ export class SucheComponent {
         error: err => this.banner.open('Service zur Zeit nicht erreichbar.', 'OK', { duration: 5000, panelClass: ['banner'] })
       });
     } else {
-      this.banner.open('Bitte einen Vorschlag wählen.', 'OK', { duration: 5000, panelClass: ['banner'] })
+      this.banner.open('Bitte ein Suchergebnis auswählen.', 'OK', { duration: 5000, panelClass: ['banner'] })
     }
   }
 }

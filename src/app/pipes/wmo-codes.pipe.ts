@@ -5,6 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true
 })
 
+// WMO Weather interpretation codes (WW) -> Wetter-Icons https://erikflowers.github.io/weather-icons/
 export class WmoCodesPipe implements PipeTransform {
 
   transform(value: number, tageszeit: number = 1): string {

@@ -5,7 +5,7 @@
 ## Preview
 | Desktop | Smartphone |
 | --- | --- |
-| ![Desktop](./media/Desktop.png) | ![Smartphone](./media/Smartphone.png) |
+| ![Desktop](./src/assets/media/Desktop.png) | ![Smartphone](./src/assets/media/Smartphone.png) |
 
 ## About the Project
 This is my first independent Angular project. My objective was to build a simple weather application to primarily explore the following aspects: processing of APIs/JSONs, Angular Material and custom Angular themes. Many features can still be expanded, but I'm satisfied with the foundation.

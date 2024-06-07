@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class WetterServiceService {
+  // Weather Forecast API: https://open-meteo.com/en/docs
   url: string = 'https://api.open-meteo.com/v1/forecast?'
   params: string = '&current=temperature_2m,is_day,weather_code&timezone=Europe%2FBerlin&forecast_days=1'
 
